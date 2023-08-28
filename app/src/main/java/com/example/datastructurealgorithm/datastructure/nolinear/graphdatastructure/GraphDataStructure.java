@@ -4,10 +4,15 @@ public class GraphDataStructure {
     public static void main(String[] args) {
 
 
-        // A---B
-        // |  /|
-        // | / |
-        // C---D---E
+//          Graph:
+//          1---2
+//         /|\ /|\
+//        | | X | |
+//         \|/ \|/
+//          3---4
+//           \ /
+//            5
+
 
         // Create a graph with generic vertices (String in this case)
         Graph<Integer> graph = new Graph<>(5);
