@@ -3,6 +3,12 @@ Since elements are arranged in particular order, they are easy to implement.
 However, when the complexity of the program increases,
 the linear data structures might not be the best choice because of operational complexities.
 
+1. Array Data Structure
+In an array, elements in memory are arranged in continuous memory.
+All the elements of an array are of the same type.
+And, the type of elements that can be stored in the form of
+arrays is determined by the programming language.
+
 2. Stack Data Structure
 In stack data structure, elements are stored in the LIFO principle.
 That is, the last element stored in a stack will be removed first.
