@@ -7,14 +7,12 @@ import java.util.Map;
 
 // Generic Graph class
 class Graph<T> {
-    private int vertices;
     private Map<Integer, List<T>> adjacencyList;
 
     // Constructor to initialize the graph with a given number of vertices
     public Graph(int vertices) {
-        this.vertices = vertices;
         adjacencyList = new HashMap<>();
-        
+
         // Initialize adjacency lists for each vertex
         for (int i = 0; i < vertices; i++) {
             // We're using Integer.valueOf(i) as generic keys
@@ -26,7 +24,7 @@ class Graph<T> {
     public void addEdge(T source, T destination) {
         // Add destination to source's adjacency list
         adjacencyList.get(source).add(destination);
-        
+
         // For an undirected graph, add source to destination's adjacency list
         adjacencyList.get(destination).add(source);
     }
