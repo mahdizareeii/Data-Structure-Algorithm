@@ -15,22 +15,22 @@ class MyLinkedList<T> {
     public void insert(T data) {
         Node<T> newNode = new Node<>(data);
         if (head == null) {
-            head = newNode;
+            head = newNode; // Set the head to the new node
         } else {
             Node<T> current = head;
             while (current.next != null) {
-                current = current.next;
+                current = current.next; // Traverse to the last node
             }
-            current.next = newNode;
+            current.next = newNode; // Append the new node to the end
             if (isDoubly) {
-                newNode.prev = current;
+                newNode.prev = current; // For doubly linked list, set previous pointer
             }
         }
 
         if (isCircular) {
-            newNode.next = head;
+            newNode.next = head; // Make the new node point back to head
             if (isDoubly) {
-                head.prev = newNode;
+                head.prev = newNode; // For doubly circular linked list, set previous pointer of head
             }
         }
     }
