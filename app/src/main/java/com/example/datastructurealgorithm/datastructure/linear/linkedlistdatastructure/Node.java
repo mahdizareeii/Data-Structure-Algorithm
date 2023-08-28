@@ -1,12 +1,13 @@
 package com.example.datastructurealgorithm.datastructure.linear.linkedlistdatastructure;
 
-class Node {
-    int value;
-    Node next;
-    Node prev;
+class Node<T> {
+    T data;
+    Node<T> prev;
+    Node<T> next;
 
-    Node(int d) {
-        value = d;
-        next = null;
+    public Node(T data) {
+        this.data = data;
+        this.prev = null;
+        this.next = null;
     }
 }

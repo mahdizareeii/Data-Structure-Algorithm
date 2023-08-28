@@ -2,70 +2,28 @@ package com.example.datastructurealgorithm.datastructure.linear.linkedlistdatast
 
 public class LinkedListDataStructure {
     public static void main(String[] args) {
+        MyLinkedList<Integer> linkedList = new MyLinkedList<>(false, false);
+        linkedList.insert(10);
+        linkedList.insert(20);
+        linkedList.insert(30);
 
-    }
+        System.out.print("Singly Linked List: ");
+        linkedList.display();
 
-    private void singlyLinkedList(){
-        MyLinkedList linkedList = new MyLinkedList();
+        MyLinkedList<Integer> doublyLinkedList = new MyLinkedList<>(true, false);
+        doublyLinkedList.insert(40);
+        doublyLinkedList.insert(50);
+        doublyLinkedList.insert(60);
 
-        // Assign value values
-        linkedList.head = new Node(1);
-        Node second = new Node(2);
-        Node third = new Node(3);
+        System.out.print("Doubly Linked List: ");
+        doublyLinkedList.display();
 
-        // Connect nodes
-        linkedList.head.next = second;
-        second.next = third;
+        MyLinkedList<Integer> circularLinkedList = new MyLinkedList<>(false, true);
+        circularLinkedList.insert(70);
+        circularLinkedList.insert(80);
+        circularLinkedList.insert(90);
 
-        // printing node-value
-        while (linkedList.head != null) {
-            System.out.print(linkedList.head.value + " ");
-            linkedList.head = linkedList.head.next;
-        }
-    }
-
-    private void doublyLinkedList(){
-        MyLinkedList linkedList = new MyLinkedList();
-
-        // Assign value values
-        linkedList.head = new Node(1);
-        Node second = new Node(2);
-        Node third = new Node(3);
-
-        // Connect nodes
-        linkedList.head.next = second;
-        linkedList.head.prev = null;
-
-        second.next = third;
-        second.prev = linkedList.head;
-
-        third.next = null;
-        third.prev = second;
-
-        // printing node-value
-        while (linkedList.head != null) {
-            System.out.print(linkedList.head.value + " ");
-            linkedList.head = linkedList.head.next;
-        }
-    }
-
-    private void circularLinkedList(){
-        MyLinkedList linkedList = new MyLinkedList();
-
-        // Assign value values
-        linkedList.head = new Node(1);
-        Node second = new Node(2);
-        Node third = new Node(3);
-
-        // Connect nodes
-        linkedList.head.next = second;
-        second.next = third;
-        third.next = linkedList.head;
-
-        // printing node-value
-        while (linkedList.head != null) {
-            System.out.print(linkedList.head.value + " ");
-            linkedList.head = linkedList.head.next;
-        }
+        System.out.print("Circular Linked List: ");
+        circularLinkedList.display();
     }
 }
