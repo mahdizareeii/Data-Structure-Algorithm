@@ -15,7 +15,7 @@ public class GraphDataStructure {
 
 
         // Create a graph with generic vertices (String in this case)
-        Graph<Integer> graph = new Graph<>(5);
+        Graph graph = new Graph(5);
 
         // Add edges to the graph
         graph.addEdge(1, 2);
