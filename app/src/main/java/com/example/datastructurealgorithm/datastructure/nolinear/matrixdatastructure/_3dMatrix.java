@@ -7,7 +7,7 @@ public class _3dMatrix {
     final int rowsCount;
     final int columnsCount;
 
-    public final int matrix[][][];
+    public final int[][][] matrix;
 
     public _3dMatrix(int planes, int rows, int columns) {
         this.planesCount = planes;
