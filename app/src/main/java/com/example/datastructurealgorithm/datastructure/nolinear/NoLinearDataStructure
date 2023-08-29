@@ -12,3 +12,7 @@ is connected to other vertices through edges.
 2. Trees Data Structure
 Similar to a graph, a tree is also a collection of vertices and edges. However,
 in tree data structure, there can only be one edge between two vertices.
+
+3. Matrix Data Structure
+A matrix represents a collection of numbers arranged in an order of rows and columns.
+It is necessary to enclose the elements of a matrix in parentheses or brackets.
