@@ -4,20 +4,21 @@ public class MergeSort implements SortingStrategy {
 
     @Override
     public int[] sort(int[] array) {
-        int left = 0;
-        int right = array.length - 1;
+        return mergeSort(array, 0, array.length - 1);
+    }
+
+    int[] mergeSort(int[] arr, int left, int right) {
         if (left < right) {
-            // Find the middle point
             int mid = left + (right - left) / 2;
 
-            // Recursive call on the left and right subarrays
-            sort(array);
-            sort(array);
+            // Recursively sort the left and right subarrays
+            mergeSort(arr, left, mid);
+            mergeSort(arr, mid + 1, right);
 
             // Merge the sorted subarrays
-            merge(array, left, mid, right);
+            merge(arr, left, mid, right);
         }
-        return array;
+        return arr;
     }
 
     public static void merge(int[] arr, int left, int mid, int right) {

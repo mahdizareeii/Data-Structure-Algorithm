@@ -6,15 +6,18 @@ public class QuickSort implements SortingStrategy {
     public int[] sort(int[] array) {
         int low = 0;
         int high = array.length - 1;
+        return quickSort(array, low, high);
+    }
+
+    int[] quickSort(int[] arr, int low, int high) {
         if (low < high) {
-            // Partition the array, and get the pivot index
-            int pivotIndex = partition(array, low, high);
+            int pivotIndex = partition(arr, low, high);
 
             // Recursively sort the subarrays on both sides of the pivot
-            sort(array);
-            sort(array);
+            quickSort(arr, low, pivotIndex - 1);
+            quickSort(arr, pivotIndex + 1, high);
         }
-        return array;
+        return arr;
     }
 
     private int partition(int[] arr, int low, int high) {
