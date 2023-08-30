@@ -1,0 +1,32 @@
+There are several search algorithms that are commonly used to find an element within a data structure.
+Some of the most common search algorithms include:
+
+Linear Search:
+Also known as sequential search, it sequentially checks each element
+of the data structure until a match is found or the whole list has been searched.
+
+Binary Search:
+This algorithm is used on sorted data structures.
+It compares the middle element with the target element and eliminates half of the remaining elements
+from consideration based on the comparison.
+
+Jump Search:
+It's similar to binary search but divides the data structure into blocks and performs a
+linear search within the block containing the target element.
+
+Interpolation Search:
+This algorithm works best on uniformly distributed sorted data.
+It uses proportional comparison to estimate the position of the target element.
+
+Exponential Search:
+This is used for unbounded lists. It first searches for a range where the target element might
+be and then performs binary search within that range.
+
+Hashing:
+Hashing algorithms use a hash function to map keys to indices in an array (or hash table).
+This allows for quick retrieval of values based on their keys.
+
+These are some of the common search algorithms, and the choice of which algorithm to use
+depends on the characteristics of the data and the problem at hand.
+Each algorithm has its own advantages and trade-offs in terms of time complexity, memory usage,
+and applicability to different types of data structures.
